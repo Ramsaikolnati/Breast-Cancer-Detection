@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="/userhome">Home</a></li>
+  <li><a href="/profile">Profile</a></li>
+  <li><a href="/predict">Prediction</a></li>
+  <li><a href="/feedback">Feedback</a></li>
+  <li style="float:right"><a href="/logout">Logout</a></li>
+</ul>
+<h1 align=center>Breast Cancer Detection</h1>
+<table align=center>
+<form method="post" action="prediction">
+<tr><td>radius_mean</td><td><input type="text" name="t1" required></td></tr>
+<tr><td>texture_mean</td><td><input type="text" name="t2" required></td></tr>
+<tr><td>perimeter_mean</td><td><input type="text" name="t3" required></td></tr>
+<tr><td>area_mean</td><td><input type="text" name="t4" required></td></tr>
+<tr><td>smoothness_mean</td><td><input type="text" name="t5" required></td></tr>
+<tr><td>compactness_mean</td><td><input type="text" name="t6" required></td></tr>
+<tr><td>concavity_mean</td><td><input type="text" name="t7" required></td></tr>
+<tr><td>concave points_mean</td><td><input type="text" name="t8" required></td></tr>
+<tr><td>symmetry_mean</td><td><input type="text" name="t9" required></td></tr>
+<tr><td>fractal_dimension_mean</td><td><input type="text" name="t10" required></td></tr>
+<tr><td>radius_se</td><td><input type="text" name="t11" required></td></tr>
+<tr><td>texture_se</td><td><input type="text" name="t12" required></td></tr>
+<tr><td>perimeter_se</td><td><input type="text" name="t13" required></td></tr>
+<tr><td>area_se</td><td><input type="text" name="t14" required></td></tr>
+<tr><td>smoothness_se</td><td><input type="text" name="t15" required></td></tr>
+<tr><td>compactness_se</td><td><input type="text" name="t16" required></td></tr>
+<tr><td>concavity_se</td><td><input type="text" name="t17" required></td></tr>
+<tr><td>concave points_se</td><td><input type="text" name="t18" required></td></tr>
+<tr><td>symmetry_se</td><td><input type="text" name="t19" required></td></tr>
+<tr><td>fractal_dimension_se</td><td><input type="text" name="t20" required></td></tr>
+<tr><td>radius_worst</td><td><input type="text" name="t21" required></td></tr>
+<tr><td>texture_worst</td><td><input type="text" name="t22" required></td></tr>
+<tr><td>perimeter_worst</td><td><input type="text" name="t23" required></td></tr>
+<tr><td>area_worst</td><td><input type="text" name="t24" required></td></tr>
+<tr><td>smoothness_worst</td><td><input type="text" name="t25" required></td></tr>
+<tr><td>compactness_worst</td><td><input type="text" name="t26" required></td></tr>
+<tr><td>concavity_worst</td><td><input type="text" name="t27" required></td></tr>
+<tr><td>concave points_worst</td><td><input type="text" name="t28" required></td></tr>
+<tr><td>symmetry_worst</td><td><input type="text" name="t29" required></td></tr>
+<tr><td>fractal_dimension_worst</td><td><input type="text" name="t30" required></td></tr>
+<tr><td colspan=2 align=center><input type="submit" value="predict"></td></tr>
+</form>
+</table>
+</body>
+</html>
